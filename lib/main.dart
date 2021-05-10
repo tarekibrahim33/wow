@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' show AppBar, BuildContext, Colors, MaterialApp, Scaffold, StatelessWidget, Text, Widget, runApp;
+import 'package:webview_flutter/webview_flutter.dart';
 
 void main()=>runApp(firstapp());
 
@@ -7,15 +8,14 @@ class firstapp extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
   return  MaterialApp(
-      title: 'tarek',
+      title: 'wow',
       debugShowCheckedModeBanner: false,
       debugShowMaterialGrid: false,
       home: Scaffold(
-        appBar:AppBar(
-          title: Text('first App'),
-backgroundColor:Colors.greenAccent,
-          elevation: 0.0,
-          centerTitle: true,
+
+        body:  WebView(
+          initialUrl: 'https://www.wow-bakery.com/',
+          javascriptMode: JavascriptMode.unrestricted,
         ),
 
       )
